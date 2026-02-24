@@ -1,3 +1,4 @@
+# deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,6 +15,7 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: :latest
+        # 반드시 '본인ID/이미지이름' 형식이어야 합니다!
+        image: junguihun/hun-app:latest 
         ports:
         - containerPort: 5000
